@@ -8,7 +8,6 @@
     Out: /points_no_ground (points above ground)
   -->
   <include file="$(find points_preprocessor)/launch/ray_ground_filter.launch">
-    <arg name="sensor_height" value="2.4" />
   </include>
 
 </launch>
