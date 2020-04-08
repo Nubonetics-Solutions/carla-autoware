@@ -64,7 +64,7 @@
   <node pkg="rostopic" type="rostopic" name="config_waypoint_follower_rostopic"
         args="pub -l /config/waypoint_follower autoware_config_msgs/ConfigWaypointFollower
         '{ header: auto, param_flag: 1, velocity: 15.0, lookahead_distance: 4.0, lookahead_ratio: 2.0, minimum_lookahead_distance: 6.0, displacement_threshold: 0.0, relative_angle_threshold: 0.0 }' " />
-  <include file="$(find waypoint_follower)/launch/pure_pursuit.launch"/>
+  <include file="$(find pure_pursuit)/launch/pure_pursuit.launch"/>
 
   <!-- 
     # twist_filter #
@@ -73,6 +73,6 @@
     In:  /decision_maker/state (@todo: not connected yet)
     Out: /vehicle_cmd (the combined vehicle command for actuator)
   -->
-  <include file="$(find waypoint_follower)/launch/twist_filter.launch"/>
+  <include file="$(find twist_filter)/launch/twist_filter.launch"/>
 
 </launch>
